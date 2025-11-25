@@ -3,12 +3,12 @@
   flex-wrap: wrap;
   background-color: rgb(233, 150, 236);
 }
- 
+
 .container div {
   background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
+  flex-grow: 1; 
+  width: 100px; 
   padding: 10px;
-  text-align: center;  
+  text-align: center; 
   font-size: 30px;
 }
