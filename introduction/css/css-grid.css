@@ -1,3 +1,6 @@
+body {
+    justify-content: center;
+}
 
 .container {
     max-width: 900px;
@@ -22,12 +25,12 @@
 
 .container h2 {
     font-size: 1.3em;
-    color: #9c27b0; /* A darker accent color */
+    color: #96669e; 
     margin-top: 0;
     margin-bottom: 8px;
     border-bottom: 1px solid #e0b3ec;
     padding-bottom: 5px;
-    text-align: center; /* Center the section title */
+    text-align: center; 
 }
 
 .container p {
