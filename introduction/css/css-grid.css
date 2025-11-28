@@ -9,6 +9,14 @@ body {
     background-color: #f7f3f9;
 }
 
+h1 {
+    width: 100%; 
+    text-align: center;
+    color: #6a1b9a;
+    font-size: 2.5em;
+    margin-bottom: 30px; 
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
