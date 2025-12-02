@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +7,7 @@ body {
     font-family: "Lucida Sans", sans-serif;
     font-size: 17px;
     background-color: #fcf8f9;
-} 
+}
 
 .grid-container {
     display: grid;
@@ -14,7 +15,7 @@ body {
         'header'
         'menu'
         'main'
-        'Me' 
+        'Me'
         'footer';
     background-color: white;
     gap: 10px;
@@ -23,7 +24,7 @@ body {
 
 .header {
     grid-area: header;
-    background-color: #e91e63;
+    background-color: #e91e63; 
     text-align: center;
     color: #ffffff;
     padding: 15px 0;
@@ -48,14 +49,14 @@ body {
 .menu li {
     padding: 10px;
     margin-bottom: 8px;
-    background-color: #fce4ec;
+    background-color: #fce4ec; 
     color: #333333;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .menu li:hover {
-    background-color: #f06292;
+    background-color: #f06292; 
     color: #ffffff;
     cursor: pointer;
 }
@@ -63,9 +64,9 @@ body {
 .content {
     grid-area: main;
     padding: 10px;
-} 
+}
 
-.content > h1 {
+.content > h2 { 
     font-size: 30px;
     margin-bottom: 10px;
     color: #e91e63;
@@ -76,21 +77,18 @@ body {
 }
 
 .Me {
-    grid-area: Me; 
+    grid-area: Me;
     border: 1px solid #f06292;
-    background-color: #fffafa;
+    background-color: #fffafa; 
     padding: 15px;
     border-radius: 5px;
+    text-align: center;
 }
 
-.Me > h2 {
-    font-size: 24px;
-    color: #e91e63;
-    margin-bottom: 10px;
-}
-
-.Me li {
-    margin-bottom: 5px;
+.Me img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .footer {
@@ -103,18 +101,31 @@ body {
 
 
 @media (min-width: 600px) {
-    .header {grid-area: 1 / span 6;}
-    .menu {grid-area: 2 / span 1;}
-    .content {grid-area: 2 / span 4;}
-    .Me {grid-area: 3 / span 6;}
-    .footer {grid-area: 4 / span 6;}
-}
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "header header header header header header"
+            "menu   menu   menu   main   main   main"
+            "Me     Me     Me     Me     Me     Me"
+            "footer footer footer footer footer footer";
+    }
+
+    .menu {grid-area: 2 / 1 / span 1 / span 3;} 
+    .content {grid-area: 2 / 4 / span 1 / span 3;} 
+    .Me {grid-area: 3 / span 6;} 
+  }
 
 @media (min-width: 768px) {
-    .header {grid-area: 1 / span 6;}
-    .menu {grid-area: 2 / span 1;}
-    .content {grid-area: 2 / span 4;}
-    /* Replaced .facts with .Me to match your class name */
-    .Me {grid-area: 2 / span 1;}
-    .footer {grid-area: 3 / span 6;}
+    .grid-container {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "menu   main   Me"
+            "footer footer footer";
+    }
+    .header {grid-area: header;}
+    .menu {grid-area: menu;}
+    .content {grid-area: main;}
+    .Me {grid-area: Me;} 
+    .footer {grid-area: footer;}
 }
