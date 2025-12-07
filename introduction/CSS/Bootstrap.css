@@ -1,4 +1,3 @@
-
 body {
     background-color: #fcf8f9 !important; 
     font-family: "Lucida Sans", sans-serif !important;
@@ -12,7 +11,7 @@ body {
 }
 
 h1 {
-    background-color: #e91e63;
+    background-color: #e91e63; 
     color: #ffffff !important; 
     text-align: center;
     padding: 15px 0;
@@ -28,12 +27,12 @@ h1 {
     background-color: #fffafa !important; 
 }
 .text-primary {
-    color: #e91e63 !important;
+    color: #e91e63 !important; 
 }
 
 
 .col-md.bg-light.p-3.border {
-    border-color: #f06292 !important;
+    border-color: #f06292 !important; 
     border-width: 1px !important;
     border-radius: 5px; 
 }
